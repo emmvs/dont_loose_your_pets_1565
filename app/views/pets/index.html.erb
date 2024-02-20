@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>All these lost pets 😱</h1>
+  <% @pets.each do |pet| %>
+    <li>
+      <%= link_to pet.name, pet_path(pet.id) %>
+    </li>
+  <% end %>
+  <%= link_to "Add a pet", new_pet_path %>
+</div>
